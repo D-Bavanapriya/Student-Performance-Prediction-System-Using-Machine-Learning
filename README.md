@@ -115,4 +115,4 @@ Machine Learning Regression Tutorials
 
 ## Deployment Link
 
-Streamlit Deployment : http://localhost:8502
+Streamlit Deployment link: https://student-score-predictor-ml.streamlit.app/
