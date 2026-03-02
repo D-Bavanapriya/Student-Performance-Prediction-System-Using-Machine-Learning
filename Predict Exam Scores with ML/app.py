@@ -3,9 +3,14 @@ import numpy as np
 import joblib
 import joblib
 import warnings
+import os
 warnings.filterwarnings("ignore")
 
-model = joblib.load("best_model.pkl")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(BASE_DIR, "best_model.pkl")
+
+model = joblib.load(model_path)
 
 st.title("Student Exam Score Predictor")
 
@@ -25,3 +30,4 @@ if st.button("Predict Exam Score"):
     prediction = max(0, min(100,prediction))
 
     st.success(f"Predicted Exam Score: {prediction:.2f}")
+
